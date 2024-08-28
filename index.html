@@ -28,28 +28,59 @@
 
         .button-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+                "button1"
+                "button2 button3"
+                "button4 button5"
+                "button6";
             gap: 20px;
+            width: 80%; /* Occupy more horizontal space */
         }
 
         .button {
-            display: inline-block;
-            padding: 15px 20px;
-            font-size: 14px;
+            padding: 20px 0;
+            font-size: 16px;
             color: #ffffff;
             border: none;
             border-radius: 4px;
             text-decoration: none;
             transition: background-color 0.3s ease;
+            text-align: center;
         }
 
-        /* Warm and calm color palette for buttons */
-        .button-1 { background-color: #FF7F50; } /* Coral */
-        .button-2 { background-color: #FFB6C1; } /* Light Pink */
-        .button-3 { background-color: #FFD700; } /* Gold */
-        .button-4 { background-color: #FFA07A; } /* Light Salmon */
-        .button-5 { background-color: #F0E68C; } /* Khaki */
-        .button-6 { background-color: #E6E6FA; } /* Lavender */
+        .button-1 {
+            grid-area: button1;
+            background-color: #53af8b; /* Green */
+        }
+
+        .button-2 {
+            grid-area: button2;
+            background-color: #587a8f; /* Slate blue */
+        }
+
+        .button-3 {
+            grid-area: button3;
+            background-color: #665a72; /* purple */
+        }
+
+        .button-4 {
+            grid-area: button4;
+            background-color: #e3adb5; /* Light Salmon */
+        }
+
+        .button-5 {
+            grid-area: button5;
+            background-color: #95b8e3; /* Blue */
+        }
+
+        .button-6 {
+            grid-area: button6;
+            background-color: #FFAF6E; /* Orange */
+        }
+
+        .button-1, .button-6 {
+            width: 100%;
+        }
 
         .button:hover {
             opacity: 0.9;
@@ -60,11 +91,11 @@
     <h1>GTAC Master Inventory</h1>
     <div class="button-grid">
         <a href="YOUR_FIRST_SHEET_URL" class="button button-1" target="_blank">Locate an item</a>
-        <a href="YOUR_SECOND_SHEET_URL" class="button button-2" target="_blank">Ordering</a>
-        <a href="YOUR_THIRD_SHEET_URL" class="button button-3" target="_blank">Search by program code</a>
-        <a href="YOUR_FOURTH_SHEET_URL" class="button button-4" target="_blank">Search by key term</a>
+        <a href="YOUR_SECOND_SHEET_URL" class="button button-2" target="_blank">Search by program code</a>
+        <a href="YOUR_THIRD_SHEET_URL" class="button button-3" target="_blank">Search by key term</a>
+        <a href="YOUR_FOURTH_SHEET_URL" class="button button-4" target="_blank">Lab Inventory</a>
         <a href="YOUR_FIFTH_SHEET_URL" class="button button-5" target="_blank">Tech Inventory</a>
-        <a href="YOUR_SIXTH_SHEET_URL" class="button button-6" target="_blank">Lab Inventory</a>
+        <a href="YOUR_SIXTH_SHEET_URL" class="button button-6" target="_blank">Ordering</a>
     </div>
 </body>
 </html>
